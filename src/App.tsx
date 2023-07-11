@@ -38,7 +38,7 @@ function App() {
                     />
                 </a>
             </div>
-            <h1>Vite + React</h1>
+            <h1>{import.meta.env.VITE_VERSION}</h1>
             <div className="card">
                 <button onClick={fetchData}>ping</button>
                 <button
