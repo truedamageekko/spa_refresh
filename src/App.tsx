@@ -2,7 +2,6 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Modal } from "antd";
-import { useEffect } from "react";
 
 function App() {
     const fetchData = async () => {
@@ -25,10 +24,6 @@ function App() {
         }
     };
 
-    useEffect(() => {
-        console.log("load version: ", import.meta.env.VITE_VERSION);
-    }, []);
-
     return (
         <>
             <div>
@@ -46,6 +41,11 @@ function App() {
             <h1>Vite + React</h1>
             <div className="card">
                 <button onClick={fetchData}>ping</button>
+                <button
+                    onClick={() => console.log(import.meta.env.VITE_VERSION)}
+                >
+                    version
+                </button>
             </div>
         </>
     );
