@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      
+      - name: Git config
+        run: |
+          - git config --global user.email "lingxi.xing@screeningeagle.com"
+          - git config --global user.name "bomba"
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
