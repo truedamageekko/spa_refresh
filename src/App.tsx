@@ -7,7 +7,11 @@ function App() {
     const fetchData = async () => {
         try {
             const res = await fetch(
-                "https://main--meek-panda-62a9fa.netlify.app/api/hello"
+                "https://main--meek-panda-62a9fa.netlify.app/api/hello",
+                {
+                    method: "post",
+                    headers: { "Content-Type": "application/json" },
+                }
             );
             const data = await res.json();
             console.log(data);
