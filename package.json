@@ -1,7 +1,7 @@
 {
     "name": "spa_refresh",
     "private": false,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "homepage": "https://truedamageekko.github.io/spa_refresh",
     "type": "module",
     "scripts": {
@@ -14,6 +14,7 @@
         "start": "yarn run start"
     },
     "dependencies": {
+        "antd": "^5.6.4",
         "gh-pages": "^5.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
