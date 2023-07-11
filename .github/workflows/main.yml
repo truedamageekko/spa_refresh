@@ -17,6 +17,7 @@ jobs:
         run: |
           git config --global user.email "lingxi.xing@screeningeagle.com"
           git config --global user.name "truedamageekko"
+          git remote set-url origin https://truedamageekko:x5gvvpt3rhy76x4@github.com/truedamageekko/spa_refresh.git
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -27,4 +28,4 @@ jobs:
         run: yarn
 
       - name: Build and deploy
-        run: npm run deploy
+        run: yarn deploy
