@@ -17,7 +17,7 @@ jobs:
         run: |
           git config --global user.email "lingxi.xing@screeningeagle.com"
           git config --global user.name "truedamageekko"
-          git remote set-url origin https://truedamageekko:${GITHUB_TOKEN}@github.com/truedamageekko/spa_refresh.git
+          git remote set-url origin https://truedamageekko:${secrets.GITHUB_TOKEN}@github.com/truedamageekko/spa_refresh.git
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -27,13 +27,6 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Build 🏗️
-        run: |
-          yarn clean
-          yarn build
-          
-      - name: Deploy to GH Pages 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public
+      - name: Build and deploy
+        run: yarn deploy
+        
